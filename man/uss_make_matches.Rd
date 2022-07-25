@@ -2,22 +2,23 @@
 % Please edit documentation in R/matches.R
 \name{uss_make_matches}
 \alias{uss_make_matches}
-\title{Title Make a standard league-play tibble}
+\title{Make a standard league-play tibble}
 \usage{
 uss_make_matches(data_engsoc)
 }
 \arguments{
-\item{data_engsoc}{df from engsoccerdata package}
+\item{data_engsoc}{obtained from {engsoccerdata}.}
 
-\item{country}{a country one of spain, uk, Italy, Germany, holland}
+\item{country}{\code{character} scalar, specifies the league.}
 }
 \value{
 a tibble with columns \code{country}, \code{date}, \code{season}, \code{tier}, \code{home},
 \code{visitor}, \code{goals_home}, \code{goals_visitor}.
 }
 \description{
-Title Make a standard league-play tibble
+Given a league-play data frame from {engsoccer}, returns a tibble with
+standardised column-names and types, e.g. \code{date} is a \code{Date}.
 }
 \examples{
-uss_make_matches(engsoccerdata::spain, "Spain")
+uss_make_matches(engsoccerdata::spain)
 }
