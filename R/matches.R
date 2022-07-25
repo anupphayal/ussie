@@ -13,12 +13,13 @@
 #' @export
 #'
 #' @examples
-#' uss_make_matches(engsoccerdata::spain)
-uss_make_matches <- function(data_engsoc) {
+#' uss_make_matches(engsoccerdata::spain, "Spain")
+uss_make_matches <- function(data_engsoc, country) {
   result <-
     data_engsoc |>
     tibble::as_tibble() |>
     dplyr::transmute(
+      country = as.character(country),
       tier = factor(tier, levels = c("1", "2", "3", "4")),
       season = as.integer(Season),
       date = as.Date(Date),
