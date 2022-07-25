@@ -2,7 +2,7 @@
 # CITATION file created with {cffr} R package, v0.2.2
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
- 
+
 cff-version: 1.2.0
 message: 'To cite package "ussie" in publications use:'
 type: software
@@ -16,6 +16,7 @@ authors:
 - family-names: Phayal
   given-names: Anup
   email: anupphayal@gmail.com
+year: '2022'
 preferred-citation:
   type: manual
   title: 'ussie: European soccer data'
